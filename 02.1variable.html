@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let letvariablename = "test letvariablename"
+        // let letvariablename = "test letvariablename" //Uncaught SyntaxError: Identifier 'letvariablename' has already been declared
+        letvariablename = "test other value" // we can re-assign some new value to let var
+        console.log('letvariablename => ',letvariablename); // developer option for debuging
+       
+       
+       
+        var variablename = "test variablename" // declaration
+        var variablename = "test new val" // re-declaration possible 
+        variablename = "test new val something" // re-assignment possible 
+        console.log("variablename => ",variablename); // developer option for debuging
+        
+        
+        const constantname = "test"
+        // const constantname = "test"
+        constantname = "test test"
+        console.log("constantname => ",constantname); // developer option for debuging
+    </script>
+</body>
+</html>

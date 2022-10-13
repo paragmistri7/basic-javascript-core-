@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="disp"></div>
+    <input type="text" name="val1" onblur="getdata()" id="val1">
+    String Conversionlet value = true;
+    <h2><a class="main__anchor" name="summary" href="#summary">Summary</a></h2><p>The three most widely used type conversions are to string, to number, and to boolean.</p>
+<p><strong><code>String Conversion</code></strong> – Occurs when we output something. Can be performed with <code>String(value)</code>. The conversion to string is usually obvious for primitive values.</p>
+<p><strong><code>Numeric Conversion</code></strong> – Occurs in math operations. Can be performed with <code>Number(value)</code>.</p>
+<p>The conversion follows the rules:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Becomes…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>undefined</code></td>
+<td><code>NaN</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>true&nbsp;/&nbsp;false</code></td>
+<td><code>1 / 0</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td>The string is read “as is”, whitespaces from both sides are ignored. An empty string becomes <code>0</code>. An error gives <code>NaN</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>Boolean Conversion</code></strong> – Occurs in logical operations. Can be performed with <code>Boolean(value)</code>.</p>
+<p>Follows the rules:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Becomes…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>, <code>""</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>any other value</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<p>Most of these rules are easy to understand and memorize. The notable exceptions where people usually make mistakes are:</p>
+<ul>
+<li><code>undefined</code> is <code>NaN</code> as a number, not <code>0</code>.</li>
+<li><code>"0"</code> and space-only strings like <code>" "</code> are true as a boolean.</li>
+</ul>
+<p>Objects aren’t covered here. We’ll return to them later in the chapter <a href="/object-toprimitive">Object to primitive conversion</a> that is devoted exclusively to objects after we learn more basic things about JavaScript.</p>
+</div>
+    
+    <script>
+        // alert(typeof value); // boolean
+        value = true
+        document.getElementById('disp').innerHTML=value;
+        value = String(value); // now value is a string "true"
+        alert(typeof value); // string
+        function getdata() {
+            val = document.getElementById('val1').value;
+            // console.log(Number(val)+50);
+            console.log(parseFloat(val)+50);
+        }
+    </script>
+</body>
+</html>

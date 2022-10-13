@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="inpname" class="inpclass" id="inpid">
+    <div class="disp"></div>
+    <script>
+        document.getElementById('inpid').addEventListener("keyup",function (e) {
+            // console.log("called");
+            // console.log(this);
+            // console.log(e);
+            var inpclassdata = document.getElementsByClassName('inpclass')
+            console.log(inpclassdata);
+            console.log(inpclassdata[0]);
+            // var inpclassdata = document.getElementById('inpid')
+            // console.log(inpclassdata);
+            document.getElementsByClassName('disp')[0].innerHTML = this.value
+        })
+    </script>
+</body>
+
+</html>

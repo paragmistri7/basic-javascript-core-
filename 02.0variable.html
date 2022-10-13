@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div itemprop="articleBody">
+        <p>Most of the time, a JavaScript application needs to work with information. Here are two examples:</p>
+        <ol>
+            <li>An online shop – the information might include goods being sold and a shopping cart.</li>
+            <li>A chat application – the information might include users, messages, and much more.</li>
+        </ol>
+        <p>Variables are used to store this information.</p>
+        <h2><a class="main__anchor" name="a-variable" href="#a-variable">A variable</a></h2>
+        <p>A <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">variable</a> is a “named storage” for
+            data. We can use variables to store goodies, visitors, and other data.</p>
+        <p>To create a variable in JavaScript, use the <code>let</code> keyword.</p>
+        <p>The statement below creates (in other words: <em>declares</em>) a variable with the name “message”:</p>
+        <div id="fxt0gymhyf" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> message<span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>Now, we can put some data into it by using the assignment operator <code>=</code>:</p>
+        <div id="zi1f19mf1b" data-trusted="1" class="code-example"
+            data-highlight="[{&quot;start&quot;:2,&quot;end&quot;:2}]" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> message<span class="token punctuation">;</span>
+        
+        <em class="block-highlight">message <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span> <span class="token comment">// store the string 'Hello' in the variable named message</span></em></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>The string is now saved into the memory area associated with the variable. We can access it using the
+            variable name:</p>
+        <div id="lamhtfxkio" data-trusted="1" class="code-example"
+            data-highlight="[{&quot;start&quot;:3,&quot;end&quot;:3}]" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="toolbar codebox__toolbar">
+                    <div class="toolbar__tool">
+                        <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+                    </div>
+                    <div class="toolbar__tool">
+                        <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                            class="toolbar__button toolbar__button_edit"></a>
+                    </div>
+                </div>
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> message<span class="token punctuation">;</span>
+        message <span class="token operator">=</span> <span class="token string">'Hello!'</span><span class="token punctuation">;</span>
+        
+        <em class="block-highlight"><span class="token function">alert</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// shows the variable content</span></em></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>To be concise, we can combine the variable declaration and assignment into a single line:</p>
+        <div id="a74h2aoe1n" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="toolbar codebox__toolbar">
+                    <div class="toolbar__tool">
+                        <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+                    </div>
+                    <div class="toolbar__tool">
+                        <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                            class="toolbar__button toolbar__button_edit"></a>
+                    </div>
+                </div>
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> message <span class="token operator">=</span> <span class="token string">'Hello!'</span><span class="token punctuation">;</span> <span class="token comment">// define the variable and assign the value</span>
+        
+        <span class="token function">alert</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Hello!</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>We can also declare multiple variables in one line:</p>
+        <div id="yzgzmwvckn" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token string">'John'</span><span class="token punctuation">,</span> age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">,</span> message <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>That might seem shorter, but we don’t recommend it. For the sake of better readability, please use a single
+            line per variable.</p>
+        <p>The multiline variant is a bit longer, but easier to read:</p>
+        <div id="a1xr8x1r7s" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token string">'John'</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> message <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>Some people also define multiple variables in this multiline style:</p>
+        <div id="3bzipw28k3" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token string">'John'</span><span class="token punctuation">,</span>
+          age <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">,</span>
+          message <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>…Or even in the “comma-first” style:</p>
+        <div id="exs9xx9c5j" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token string">'John'</span>
+          <span class="token punctuation">,</span> age <span class="token operator">=</span> <span class="token number">25</span>
+          <span class="token punctuation">,</span> message <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>Technically, all these variants do the same thing. So, it’s a matter of personal taste and aesthetics.</p>
+        <div class="important important_smart">
+            <div class="important__header"><span class="important__type"><code>var</code> instead of
+                    <code>let</code></span></div>
+            <div class="important__content">
+                <p>In older scripts, you may also find another keyword: <code>var</code> instead of <code>let</code>:
+                </p>
+                <div id="v7gwqdshk6" data-trusted="1" class="code-example"
+                    data-highlight="[{&quot;start&quot;:0,&quot;cols&quot;:[{&quot;start&quot;:0,&quot;end&quot;:3}]}]"
+                    data-prism-highlighted="1">
+                    <div class="codebox code-example__codebox">
+
+                        <div class="codebox__code" data-code="1">
+                            <pre class="line-numbers  language-javascript"
+                                tabindex="0"><span class="line-numbers-rows"><span></span></span><code class=" language-javascript"><span class="token keyword"><em class="inline-highlight">var</em></span> message <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+                <p>The <code>var</code> keyword is <em>almost</em> the same as <code>let</code>. It also declares a
+                    variable, but in a slightly different, “old-school” way.</p>
+                <p>There are subtle differences between <code>let</code> and <code>var</code>, but they do not matter
+                    for us yet. We’ll cover them in detail in the chapter <a href="/var">The old "var"</a>.</p>
+            </div>
+        </div>
+        <h2><a class="main__anchor" name="a-real-life-analogy" href="#a-real-life-analogy">A real-life analogy</a></h2>
+        <p>We can easily grasp the concept of a “variable” if we imagine it as a “box” for data, with a uniquely-named
+            sticker on it.</p>
+        <p>For instance, the variable <code>message</code> can be imagined as a box labeled <code>"message"</code> with
+            the value <code>"Hello!"</code> in it:</p>
+        <figure>
+            <div class="image" style="width:166px">
+                <div class="image__ratio" style="padding-top:87.34939759036145%"></div>
+                <object type="image/svg+xml" data="/article/variables/variable.svg" width="166" height="145"
+                    class="image__image" data-use-theme="">
+                    <img src="/article/variables/variable.svg" alt="" width="166" height="145">
+                </object>
+            </div>
+        </figure>
+        <p>We can put any value in the box.</p>
+        <p>We can also change it as many times as we want:</p>
+        <div id="iagfq5rstp" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="toolbar codebox__toolbar">
+                    <div class="toolbar__tool">
+                        <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+                    </div>
+                    <div class="toolbar__tool">
+                        <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                            class="toolbar__button toolbar__button_edit"></a>
+                    </div>
+                </div>
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> message<span class="token punctuation">;</span>
+        
+        message <span class="token operator">=</span> <span class="token string">'Hello!'</span><span class="token punctuation">;</span>
+        
+        message <span class="token operator">=</span> <span class="token string">'World!'</span><span class="token punctuation">;</span> <span class="token comment">// value changed</span>
+        
+        <span class="token function">alert</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>When the value is changed, the old data is removed from the variable:</p>
+        <figure>
+            <div class="image" style="width:392px">
+                <div class="image__ratio" style="padding-top:48.97959183673469%"></div>
+                <object type="image/svg+xml" data="/article/variables/variable-change.svg" width="392" height="192"
+                    class="image__image" data-use-theme="">
+                    <img src="/article/variables/variable-change.svg" alt="" width="392" height="192">
+                </object>
+            </div>
+        </figure>
+        <p>We can also declare two variables and copy data from one into the other.</p>
+        <div id="oztkvptees" data-trusted="1" class="code-example"
+            data-highlight="[{&quot;start&quot;:4,&quot;end&quot;:5}]" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="toolbar codebox__toolbar">
+                    <div class="toolbar__tool">
+                        <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+                    </div>
+                    <div class="toolbar__tool">
+                        <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                            class="toolbar__button toolbar__button_edit"></a>
+                    </div>
+                </div>
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> hello <span class="token operator">=</span> <span class="token string">'Hello world!'</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">let</span> message<span class="token punctuation">;</span>
+        
+        <em class="block-highlight"><span class="token comment">// copy 'Hello world' from hello into message</span>
+        message <span class="token operator">=</span> hello<span class="token punctuation">;</span></em>
+        
+        <span class="token comment">// now two variables hold the same data</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>hello<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Hello world!</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Hello world!</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <div class="important important_warn">
+            <div class="important__header"><span class="important__type">Declaring twice triggers an error</span></div>
+            <div class="important__content">
+                <p>A variable should be declared only once.</p>
+                <p>A repeated declaration of the same variable is an error:</p>
+                <div id="8otnh2xflq" data-trusted="1" class="code-example" data-prism-highlighted="1">
+                    <div class="codebox code-example__codebox">
+
+                        <div class="toolbar codebox__toolbar">
+                            <div class="toolbar__tool">
+                                <a href="#" title="run" data-action="run"
+                                    class="toolbar__button toolbar__button_run"></a>
+                            </div>
+                            <div class="toolbar__tool">
+                                <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                                    class="toolbar__button toolbar__button_edit"></a>
+                            </div>
+                        </div>
+                        <div class="codebox__code" data-code="1">
+                            <pre class="line-numbers  language-javascript"
+                                tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> message <span class="token operator">=</span> <span class="token string">"This"</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// repeated 'let' leads to an error</span>
+        <span class="token keyword">let</span> message <span class="token operator">=</span> <span class="token string">"That"</span><span class="token punctuation">;</span> <span class="token comment">// SyntaxError: 'message' has already been declared</span></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+                <p>So, we should declare a variable once and then refer to it without <code>let</code>.</p>
+            </div>
+        </div>
+        <div class="important important_smart">
+            <div class="important__header"><span class="important__type">Functional languages</span></div>
+            <div class="important__content">
+                <p>It’s interesting to note that there exist <a
+                        href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming
+                    languages, like <a href="http://www.scala-lang.org/">Scala</a> or <a
+                        href="http://www.erlang.org/">Erlang</a> that forbid changing variable values.</p>
+                <p>In such languages, once the value is stored “in the box”, it’s there forever. If we need to store
+                    something else, the language forces us to create a new box (declare a new variable). We can’t reuse
+                    the old one.</p>
+                <p>Though it may seem a little odd at first sight, these languages are quite capable of serious
+                    development. More than that, there are areas like parallel computations where this limitation
+                    confers certain benefits. Studying such a language (even if you’re not planning to use it soon) is
+                    recommended to broaden the mind.</p>
+            </div>
+        </div>
+        <h2><a class="main__anchor" name="variable-naming" href="#variable-naming">Variable naming</a></h2>
+        <p>There are two limitations on variable names in JavaScript:</p>
+        <ol>
+            <li>The name must contain only letters, digits, or the symbols <code>$</code> and <code>_</code>.</li>
+            <li>The first character must not be a digit.</li>
+        </ol>
+        <p>Examples of valid names:</p>
+        <div id="0mdpmcyoyf" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript" tabindex="0"><span class="line-numbers-rows"><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> userName<span class="token punctuation">;</span>
+        <span class="token keyword">let</span> test123<span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>When the name contains multiple words, <a href="https://en.wikipedia.org/wiki/CamelCase">camelCase</a> is
+            commonly used. That is: words go one after another, each word except first starting with a capital letter:
+            <code>myVeryLongName</code>.
+        </p>
+        <p>What’s interesting – the dollar sign <code>'$'</code> and the underscore <code>'_'</code> can also be used in
+            names. They are regular symbols, just like letters, without any special meaning.</p>
+        <p>These names are valid:</p>
+        <div id="70hzaiiulb" data-trusted="0" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="toolbar codebox__toolbar">
+                    <div class="toolbar__tool">
+                        <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+                    </div>
+                    <div class="toolbar__tool">
+                        <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                            class="toolbar__button toolbar__button_edit"></a>
+                    </div>
+                </div>
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> $ <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// declared a variable with the name "$"</span>
+        <span class="token keyword">let</span> _ <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// and now a variable with the name "_"</span>
+        
+        <span class="token function">alert</span><span class="token punctuation">(</span>$ <span class="token operator">+</span> _<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>Examples of incorrect variable names:</p>
+        <div id="imyub733jv" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> <span class="token number">1</span>a<span class="token punctuation">;</span> <span class="token comment">// cannot start with a digit</span>
+        
+        <span class="token keyword">let</span> my<span class="token operator">-</span>name<span class="token punctuation">;</span> <span class="token comment">// hyphens '-' aren't allowed in the name</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <div class="important important_smart">
+            <div class="important__header"><span class="important__type">Case matters</span></div>
+            <div class="important__content">
+                <p>Variables named <code>apple</code> and <code>AppLE</code> are two different variables.</p>
+            </div>
+        </div>
+        <div class="important important_smart">
+            <div class="important__header"><span class="important__type">Non-Latin letters are allowed, but not
+                    recommended</span></div>
+            <div class="important__content">
+                <p>It is possible to use any language, including cyrillic letters or even hieroglyphs, like this:</p>
+                <div id="vqj6xtehiz" data-trusted="1" class="code-example" data-prism-highlighted="1">
+                    <div class="codebox code-example__codebox">
+
+                        <div class="codebox__code" data-code="1">
+                            <pre class="line-numbers  language-javascript"
+                                tabindex="0"><span class="line-numbers-rows"><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> имя <span class="token operator">=</span> <span class="token string">'...'</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> 我 <span class="token operator">=</span> <span class="token string">'...'</span><span class="token punctuation">;</span></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+                <p>Technically, there is no error here. Such names are allowed, but there is an international convention
+                    to use English in variable names. Even if we’re writing a small script, it may have a long life
+                    ahead. People from other countries may need to read it some time.</p>
+            </div>
+        </div>
+        <div class="important important_warn">
+            <div class="important__header"><span class="important__type">Reserved names</span></div>
+            <div class="important__content">
+                <p>There is a <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">list
+                        of reserved words</a>, which cannot be used as variable names because they are used by the
+                    language itself.</p>
+                <p>For example: <code>let</code>, <code>class</code>, <code>return</code>, and <code>function</code> are
+                    reserved.</p>
+                <p>The code below gives a syntax error:</p>
+                <div id="8ivg8hvh2a" data-trusted="1" class="code-example" data-prism-highlighted="1">
+                    <div class="codebox code-example__codebox">
+
+                        <div class="toolbar codebox__toolbar">
+                            <div class="toolbar__tool">
+                                <a href="#" title="run" data-action="run"
+                                    class="toolbar__button toolbar__button_run"></a>
+                            </div>
+                            <div class="toolbar__tool">
+                                <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                                    class="toolbar__button toolbar__button_edit"></a>
+                            </div>
+                        </div>
+                        <div class="codebox__code" data-code="1">
+                            <pre class="line-numbers  language-javascript"
+                                tabindex="0"><span class="line-numbers-rows"><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">let</span> <span class="token keyword">let</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// can't name a variable "let", error!</span>
+        <span class="token keyword">let</span> <span class="token keyword">return</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// also can't name it "return", error!</span></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="important important_warn">
+            <div class="important__header"><span class="important__type">An assignment without
+                    <code>use strict</code></span></div>
+            <div class="important__content">
+                <p>Normally, we need to define a variable before using it. But in the old times, it was technically
+                    possible to create a variable by a mere assignment of the value without using <code>let</code>. This
+                    still works now if we don’t put <code>use strict</code> in our scripts to maintain compatibility
+                    with old scripts.</p>
+                <div id="0ov2ih54ws" data-trusted="1" class="code-example" data-no-strict="1"
+                    data-prism-highlighted="1">
+                    <div class="codebox code-example__codebox">
+
+                        <div class="toolbar codebox__toolbar">
+                            <div class="toolbar__tool">
+                                <a href="#" title="run" data-action="run"
+                                    class="toolbar__button toolbar__button_run"></a>
+                            </div>
+                            <div class="toolbar__tool">
+                                <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                                    class="toolbar__button toolbar__button_edit"></a>
+                            </div>
+                        </div>
+                        <div class="codebox__code" data-code="1">
+                            <pre class="line-numbers  language-javascript"
+                                tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token comment">// note: no "use strict" in this example</span>
+        
+        num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// the variable "num" is created if it didn't exist</span>
+        
+        <span class="token function">alert</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 5</span></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+                <p>This is a bad practice and would cause an error in strict mode:</p>
+                <div id="zmh1ky3w0t" data-trusted="1" class="code-example"
+                    data-highlight="[{&quot;start&quot;:2,&quot;end&quot;:2}]" data-prism-highlighted="1">
+                    <div class="codebox code-example__codebox">
+
+                        <div class="codebox__code" data-code="1">
+                            <pre class="line-numbers  language-javascript"
+                                tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token string">"use strict"</span><span class="token punctuation">;</span>
+        
+        <em class="block-highlight">num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// error: num is not defined</span></em></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <h2><a class="main__anchor" name="constants" href="#constants">Constants</a></h2>
+        <p>To declare a constant (unchanging) variable, use <code>const</code> instead of <code>let</code>:</p>
+        <div id="y37yvg3ecu" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span></span><code class=" language-javascript"><span class="token keyword">const</span> myBirthday <span class="token operator">=</span> <span class="token string">'18.04.1982'</span><span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>Variables declared using <code>const</code> are called “constants”. They cannot be reassigned. An attempt to
+            do so would cause an error:</p>
+        <div id="qxawzuk9nh" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="toolbar codebox__toolbar">
+                    <div class="toolbar__tool">
+                        <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+                    </div>
+                    <div class="toolbar__tool">
+                        <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                            class="toolbar__button toolbar__button_edit"></a>
+                    </div>
+                </div>
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">const</span> myBirthday <span class="token operator">=</span> <span class="token string">'18.04.1982'</span><span class="token punctuation">;</span>
+        
+        myBirthday <span class="token operator">=</span> <span class="token string">'01.01.2001'</span><span class="token punctuation">;</span> <span class="token comment">// error, can't reassign the constant!</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>When a programmer is sure that a variable will never change, they can declare it with <code>const</code> to
+            guarantee and clearly communicate that fact to everyone.</p>
+        <h3><a class="main__anchor" name="uppercase-constants" href="#uppercase-constants">Uppercase constants</a></h3>
+        <p>There is a widespread practice to use constants as aliases for difficult-to-remember values that are known
+            prior to execution.</p>
+        <p>Such constants are named using capital letters and underscores.</p>
+        <p>For instance, let’s make constants for colors in so-called “web” (hexadecimal) format:</p>
+        <div id="qkt5dutn99" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="toolbar codebox__toolbar">
+                    <div class="toolbar__tool">
+                        <a href="#" title="run" data-action="run" class="toolbar__button toolbar__button_run"></a>
+                    </div>
+                    <div class="toolbar__tool">
+                        <a href="#" title="open in sandbox" target="_blank" data-action="edit"
+                            class="toolbar__button toolbar__button_edit"></a>
+                    </div>
+                </div>
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">const</span> <span class="token constant">COLOR_RED</span> <span class="token operator">=</span> <span class="token string">"#F00"</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token constant">COLOR_GREEN</span> <span class="token operator">=</span> <span class="token string">"#0F0"</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token constant">COLOR_BLUE</span> <span class="token operator">=</span> <span class="token string">"#00F"</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token constant">COLOR_ORANGE</span> <span class="token operator">=</span> <span class="token string">"#FF7F00"</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">// ...when we need to pick a color</span>
+        <span class="token keyword">let</span> color <span class="token operator">=</span> <span class="token constant">COLOR_ORANGE</span><span class="token punctuation">;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// #FF7F00</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>Benefits:</p>
+        <ul>
+            <li><code>COLOR_ORANGE</code> is much easier to remember than <code>"#FF7F00"</code>.</li>
+            <li>It is much easier to mistype <code>"#FF7F00"</code> than <code>COLOR_ORANGE</code>.</li>
+            <li>When reading the code, <code>COLOR_ORANGE</code> is much more meaningful than <code>#FF7F00</code>.</li>
+        </ul>
+        <p>When should we use capitals for a constant and when should we name it normally? Let’s make that clear.</p>
+        <p>Being a “constant” just means that a variable’s value never changes. But there are constants that are known
+            prior to execution (like a hexadecimal value for red) and there are constants that are <em>calculated</em>
+            in run-time, during the execution, but do not change after their initial assignment.</p>
+        <p>For instance:</p>
+        <div id="poq2mxtquf" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+
+                <div class="codebox__code" data-code="1">
+                    <pre class="line-numbers  language-javascript"
+                        tabindex="0"><span class="line-numbers-rows"><span></span></span><code class=" language-javascript"><span class="token keyword">const</span> pageLoadTime <span class="token operator">=</span> <span class="token comment">/* time taken by a webpage to load */</span><span class="token punctuation">;</span></code></pre>
+                </div>
+            </div>
+
+        </div>
+        <p>The value of <code>pageLoadTime</code> is not known prior to the page load, so it’s named normally. But it’s
+            still a constant because it doesn’t change after assignment.</p>
+        <p>In other words, capital-named constants are only used as aliases for “hard-coded” values.</p>
+        <h2><a class="main__anchor" name="name-things-right" href="#name-things-right">Name things right</a></h2>
+        <p>Talking about variables, there’s one more extremely important thing.</p>
+        <p>A variable name should have a clean, obvious meaning, describing the data that it stores.</p>
+        <p>Variable naming is one of the most important and complex skills in programming. A quick glance at variable
+            names can reveal which code was written by a beginner versus an experienced developer.</p>
+        <p>In a real project, most of the time is spent modifying and extending an existing code base rather than
+            writing something completely separate from scratch. When we return to some code after doing something else
+            for a while, it’s much easier to find information that is well-labeled. Or, in other words, when the
+            variables have good names.</p>
+        <p>Please spend time thinking about the right name for a variable before declaring it. Doing so will repay you
+            handsomely.</p>
+        <p>Some good-to-follow rules are:</p>
+        <ul>
+            <li>Use human-readable names like <code>userName</code> or <code>shoppingCart</code>.</li>
+            <li>Stay away from abbreviations or short names like <code>a</code>, <code>b</code>, <code>c</code>, unless
+                you really know what you’re doing.</li>
+            <li>Make names maximally descriptive and concise. Examples of bad names are <code>data</code> and
+                <code>value</code>. Such names say nothing. It’s only okay to use them if the context of the code makes
+                it exceptionally obvious which data or value the variable is referencing.
+            </li>
+            <li>Agree on terms within your team and in your own mind. If a site visitor is called a “user” then we
+                should name related variables <code>currentUser</code> or <code>newUser</code> instead of
+                <code>currentVisitor</code> or <code>newManInTown</code>.
+            </li>
+        </ul>
+        <p>Sounds simple? Indeed it is, but creating descriptive and concise variable names in practice is not. Go for
+            it.</p>
+        <div class="important important_smart">
+            <div class="important__header"><span class="important__type">Reuse or create?</span></div>
+            <div class="important__content">
+                <p>And the last note. There are some lazy programmers who, instead of declaring new variables, tend to
+                    reuse existing ones.</p>
+                <p>As a result, their variables are like boxes into which people throw different things without changing
+                    their stickers. What’s inside the box now? Who knows? We need to come closer and check.</p>
+                <p>Such programmers save a little bit on variable declaration but lose ten times more on debugging.</p>
+                <p>An extra variable is good, not evil.</p>
+                <p>Modern JavaScript minifiers and browsers optimize code well enough, so it won’t create performance
+                    issues. Using different variables for different values can even help the engine optimize your code.
+                </p>
+            </div>
+        </div>
+        <h2><a class="main__anchor" name="summary" href="#summary">Summary</a></h2>
+        <p>We can declare variables to store data by using the <code>var</code>, <code>let</code>, or <code>const</code>
+            keywords.</p>
+        <ul>
+            <li><code>let</code> – is a modern variable declaration.</li>
+            <li><code>var</code> – is an old-school variable declaration. Normally we don’t use it at all, but we’ll
+                cover subtle differences from <code>let</code> in the chapter <a href="/var">The old "var"</a>, just in
+                case you need them.</li>
+            <li><code>const</code> – is like <code>let</code>, but the value of the variable can’t be changed.</li>
+        </ul>
+        <p>Variables should be named in a way that allows us to easily understand what’s inside them.</p>
+    </div>
+    <script>
+        "use strict";
+
+        num = 5; // error: num is not defined
+        console.log(num);
+    </script>
+</body>
+
+</html>

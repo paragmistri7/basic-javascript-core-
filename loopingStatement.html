@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const object = { a: 1, b: 2, c: 3 }; //object
+        // const object = [1,2,3]; // array
+        // console.log( object.length);
+        // for (let index = 0; index < object.length; index++) {
+        //     console.log("called");
+        // }
+        for (const property in object) {
+            console.log(property);
+            console.log(object[property]);
+            // console.log(`${property}: ${object[property]}`);
+        }
+        var a = ['a', 'b', 'c'];
+        for (let elem of a) {
+            console.log(elem);
+        }
+        var ab = ['a', 'b', 'c'];
+
+        ab.forEach(function (elem, i) {
+            console.log(i + ': ' + elem);
+        });
+
+        var iterator1 = 0; //iteration variable initialized with 0
+        while (iterator1 < 5) //testing the condition
+        {
+            document.write(iterator1 + 1 + ". " + "DataFlair Tutorial for JavaScript</br>");
+            iterator1++; //incrementing the value of the variable
+        }
+        document.write("</br>Loop end");
+
+        // Exit Control Loop
+        dowhile = 15
+        do {
+            console.log("do while called");
+        } while (dowhile < 10 );
+    </script>
+</body>
+
+</html>

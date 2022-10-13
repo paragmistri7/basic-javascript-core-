@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        One could recommend to start scripts with "use strict"… But you know what’s cool?
+    </p>
+    <p>
+
+        Modern JavaScript supports “classes” and “modules” – advanced language structures (we'll surely get to them),
+        that
+        enable use strict automatically. So we don’t need to add the "use strict" directive, if we use them.
+    </p>
+    <pre>
+        Strict mode for functions
+
+        function strict() {
+            // Function-level strict mode syntax
+            'use strict';
+            function nested() { return 'And so am I!'; }
+            return "Hi!  I'm a strict mode function!  " + nested();
+          }
+          function notStrict() { return "I'm not strict."; }
+    </pre>
+    <script>
+        // Whole-script strict mode syntax
+        'use strict';
+        var v = "Hi! I'm a strict mode script!";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider {
+            height: 50vh;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <img class="slider-item" src="images/1.jpg" alt="">
+        <img class="slider-item" src="images/2.jpg" alt="">
+        <img class="slider-item" src="images/3.jpg" alt="">
+        <img class="slider-item" src="images/4.jpg" alt="">
+        <span id="next" data-value="0" onclick="nextslider(this)">next</span>
+    </div>
+</body>
+<script>
+    // Next Button Declaration START
+    var nextBtn = document.getElementById("next");
+    // Next Button Declaration END
+    // Get All Slider Images Data by ClassName START 
+    var imagesData = document.getElementsByClassName("slider-item");
+    // Get All Slider Images Data by ClassName END
+
+    var counter = 0; // counter init for slider display block single image          
+    // Slider Function Start
+
+    function nextslider(e) {
+        nextimg = parseInt(e.getAttribute('data-value'))+1 ;
+        for (let index = 0; index < imagesData.length; index++) {
+            imagesData[index].style.display = "none";
+        }
+        imagesData[nextimg].style.display = "block";
+        // console.log(nextimg);
+        // console.log(nextimg-1);
+        if (nextimg >= (imagesData.length)-1) {
+            // console.log("inside if", nextimg);
+            e.setAttribute('data-value', 0);
+        }else{
+            // console.log("inside else", nextimg);
+            e.setAttribute('data-value', nextimg);
+        }
+    }
+
+
+
+    function Slider() {
+        // console.log("Slider calling after 2sec");
+        // Slider()
+        // console.log(imagesData);
+        // Object.entries(imagesData).map(function (img) {
+        //     console.log(img);
+        // })
+
+
+        // Populating All Images with help of for loop and Display none all images 
+        for (let index = 0; index < imagesData.length; index++) {
+            imagesData[index].style.display = "none";
+            // console.log(imagesData[index]);
+        }
+        // imagesData[index].style.display = "none";
+        if (counter >= imagesData.length) {
+            counter = 0;
+        }
+        // console.log(imagesData.length);
+        imagesData[counter].style.display = "block";
+        nextBtn.setAttribute('data-value', counter);
+        // console.log(counter);
+        counter++;
+
+        // Object.entries(imagesData).forEach((element,key) => {
+        //     console.log(element,key);
+        //     console.log(element[key]);
+        // });
+
+        // setTimeout for calling functional it self (re-cursive function) with waiting for 2sec START 
+        setTimeout(Slider, 4000);
+        // setTimeout for calling functional it self (re-cursive function) with waiting for 2sec END 
+    }
+    // Slider Function END
+
+    // Slider Calling Function // only for frist init
+    Slider()
+    // Slider Calling Function END
+    // setInterval(() => {
+    //     console.log("setInterval");
+    // }, 3000);
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>Number</li>
+        <li>BigInt</li>
+        <li>String</li>
+        <li>Boolean (logical type)</li>
+        <li>The “null” value</li>
+        <li>The “undefined” value</li>
+        <li>Objects and Symbols</li>
+    </ul>
+    <p> typeof undefined // "undefined"</p>
+
+    <p> typeof 0 // "number"</p>
+
+    <p> typeof 10n // "bigint"</p>
+
+    <p> typeof true // "boolean"</p>
+
+    <p> typeof "foo" // "string"</p>
+
+    <p> typeof Symbol("id") // "symbol"</p>
+
+    <p> typeof Math // "object" (1)</p>
+
+    <p> typeof null // "object" (2)</p>
+
+    <p> typeof alert // "function" (3)</p>
+
+    <ul>
+        <li><code>number</code> for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.</li>
+        <li><code>bigint</code> is for integer numbers of arbitrary length.</li>
+        <li><code>string</code> for strings. A string may have zero or more characters, there’s no separate single-character type.</li>
+        <li><code>boolean</code> for <code>true</code>/<code>false</code>.</li>
+        <li><code>null</code> for unknown values – a standalone type that has a single value <code>null</code>.</li>
+        <li><code>undefined</code> for unassigned values – a standalone type that has a single value <code>undefined</code>.</li>
+        <li><code>object</code> for more complex data structures.</li>
+        <li><code>symbol</code> for unique identifiers.</li>
+        </ul>
+    <script>
+        console.log(a);
+        // let a = "test"
+        var a = "test"
+        console.log(typeof a);
+    </script>
+</body>
+
+</html>

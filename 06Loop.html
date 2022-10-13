@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="disp" id="disp"></div>
+    <script>
+        // Entry Control loop START
+        // for (let index = 0; index < 879; index++) {
+        //     console.log("name");
+        //     document.getElementById("disp").innerText = index
+        // }
+        // index = 0
+        // while (index < 10) {
+        //     console.log(index);
+        //     index++;
+        // }
+        // Entry Control loop END
+
+
+        // Exit Control loop START
+        // index = 0
+        // do {
+        //     console.log(index);
+        //     index++;
+        // } while (index>10);
+        // Exit Control loop END
+
+
+
+        // Array Loop START
+        // array = [1,5,3,85];
+        // array.forEach(element => {
+        //     console.log(element);
+        // });
+        // Array Loop END
+
+
+        
+        for (let index = 0; index < 10; index++) {
+            // console.log(index);
+            for (let j = 0; j <= index; j++) {
+            // for (let j = 0; j < 10; j++) {
+                // console.log("*");
+                // document.getElementById("disp").insertAdjacentHTML("afterend"," * ");
+                // document.writeln("  "+index)
+                // document.writeln("  "+j)
+                document.writeln("  "+(j*index))
+            }
+            document.writeln(" <br> ")
+            // document.getElementById("disp").insertAdjacentHTML("afterend","<br>");
+        }
+    </script>
+</body>
+
+</html>

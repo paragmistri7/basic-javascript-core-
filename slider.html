@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            height: 50vh;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <img class="slider-item" src="images/1.jpg" alt="">
+        <img class="slider-item" src="images/2.jpg" alt="">
+        <img class="slider-item" src="images/3.jpg" alt="">
+        <img class="slider-item" src="images/4.jpg" alt="">
+        <span id="next">next
+            <input type="text" name="nextval" id="nextval">
+        </span>
+    </div>
+</body>
+<script>
+    var sliderImgs = document.getElementsByClassName('slider-item');
+    document.getElementById('next').addEventListener("click",function () {
+        console.log(this);
+        for (let index = 0; index < sliderImgs.length; index++) {
+            sliderImgs[index].style.display = "none";
+        }
+        currentIndex = document.getElementById("nextval").value
+        console.log(parseInt(currentIndex)+1);
+        sliderImgs[parseInt(currentIndex)+1].style.display = "block";
+
+    })
+    
+    var counter = 0;
+    function slider() {
+        // console.log("called");
+        // console.log(sliderImgs);
+        for (let index = 0; index < sliderImgs.length; index++) {
+            sliderImgs[index].style.display = "none";
+        }
+        if (counter>=sliderImgs.length) {
+            counter = 0;
+        }
+        // console.log(counter);
+        // console.log("Slider length",sliderImgs.length);
+        document.getElementById("nextval").value=counter
+        sliderImgs[counter].style.display = "block";
+        setTimeout(slider, 3000);
+        counter++;
+    }
+    slider()
+
+</script>
+
+</html>

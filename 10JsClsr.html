@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>In JavaScript, a closure is a function that references variables in the outer scope from its inner scope. The closure preserves the outer scope inside its inner scope.</p>
+    <script>
+        let nameOutside = "out side data"
+        // Simple JavaScript function with function calling inside START 
+        // function testing(params) {
+        //     let msg = "msg data";
+        //     console.log(msg);
+        //     console.log(nameOutside);
+        //     function sayHi() {
+        //         console.log("say hii");
+        //     }
+        //     sayHi()
+        // }
+        // Simple JavaScript function with function calling inside END
+        // console.log(testing()());
+        function testing(params) {
+            let msg = "msg data";
+            function sayHi() {
+                // console.log("say hii");
+                return msg;
+                console.log("say hii",msg);
+            }
+            return sayHi
+        }
+        let hi = testing()();
+        // console.log(hi()); 
+        console.log(hi); 
+
+    </script>
+</body>
+</html>
